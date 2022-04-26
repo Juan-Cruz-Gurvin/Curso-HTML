@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 
+    radio -> Permite seleccionar una única opción de una lista de opciones relacionadas.
+
+    checkbox-> Permite seleccionar varias opciones de una lista de opciones relacionadas
+
+    select -> Crea una lista de opciones donde podemos seleccionar una o varias opciones
+
+    Cada opción irá dentro de una etiqueta <option> </option>
+
+    Si tenemos muchas opciones podemos ordenarlas por categorías a través de la etiqueta <optgroup> con el atributo label para nombrar la categoría
+ -->
+
+ <body>
+    <h1>Elementos seleccionables</h1>
+    <form>
+        <h2>Género</h2>
+        <label>Masculino
+            <input type="radio" name="gender" value="Masculino">
+        </label>
+        <label>Femenino
+            <input type="radio" name="gender" value="Femenino">
+        </label>
+        <label>Indefinido
+            <input type="radio" name="gender" value="Indefinido">
+        </label>
+        
+        <h2>Lenguajes que conoces</h2>
+        <label>
+            <input type="checkbox" name="languages" value="HTML" checked>
+            HTML
+        </label>
+        <label>
+            <input type="checkbox" name="languages" value="CSS">
+            CSS
+        </label>
+        <label>
+            <input type="checkbox" name="languages" value="JavaScript">
+            JavaScript
+        </label>
+
+        <hr>
+        <h2>Elemento básico select</h2>
+        <select name="lenguajes" multiple>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+        </select>
+        
+        <hr>
+        <h2>Elemento avanzado select</h2>
+        <select name="lenguajes">
+            <optgroup label="front">
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            </optgroup>
+            <optgroup label="back">
+            <option value="PHP">PHP</option>
+            <option value="Python">Python</option>
+            <option value="JavaScript">JavaScript</option>
+            </optgroup>
+        </select>
+        
+        <hr>
+        <input type="list" list="pets">
+        <datalist id="pets">
+            <option value="Beagle">Beagle</option>
+            <option value="Gran Danés">Gran Danés</option>
+            <option value="Pitbull">Pitbull</option>
+            <option value="Ovejero Alemán">Ovejero Alemán</option>
+            <option value="Bulldog">Bulldog</option>
+            <option value="Husky">Husky</option>
+        </datalist>
+        
+    </form>
+</body>
+</html>
